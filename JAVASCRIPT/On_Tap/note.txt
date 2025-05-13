@@ -1,0 +1,42 @@
+GIT: Hệ thống quản lý mã nguồn theo hình thức phân tán
++ Lưu lại mã nguồn.
++ Lưu lại các phiên bản khác của mã nguồn.
++ Làm việc nhóm.
+ 
+- Repository: 
++ Local Repository
++ Remote Repository
+
+      Máy tính    Staging Area   Local Repo  <=>  Remote Repo
+                                                  index.html
+                                                    note.txt
+
+- Các câu lệnh về git:
++ git init: Khởi tạo local repo
++ git add <tên file> hoặc git add .: đưa các thay đổi vào vùng nhớ stg area
++ git commit -m "<message>": đẩy thay đổi sang local repo đồng thời tạo 1 snapshot 
++ git remote: kết nối local repo với remote repo
++ git push origin master/main: đẩy lên remote repo
+
+Từ lần t2 để đẩy các thay đổi lên thì sẽ sử:
++ git add .
++ git commit
++ git push
+
+// Table and form (HTML)
+- table => tr => td, th
+- form: 1 loạt các dữ liệu cần người dùng điền để cung cấp thông tin cho 1 nơi nào đó
++ form trong HTML: 1 loại thẻ cung cấp tính năng cho nhu cầu trên để tiếp nhận thông tin người dùng và gửi đến server nào đó 
++ Thành phần thẻ form sẽ là các ô input để điền dữ liệu và button để gửi dữ liệu
+
++ Có 2 thuộc tính đáng chú ý:
+ * Method: quy định cách thức dữ liệu được gửi đi mặc định là get
+    + GET: dữ liệu sẽ được gửi trên đường dẫn
+    + Sẽ bị giới hạn ký tự => Ít dữ liệu
+    + Dữ liệu sẽ hiển thị trên URL 
+    => GET thì thường dùng cho tìm kiếm
+
+    + POST: dữ liệu sẽ được gửi trong 1 body chứa nhiều dữ liệu hơn 
+    + Bảo mật hơn
+    => POST: đăng ký, đăng nhập, tạo mới,...
+ * Action: Quy định nơi dữ liệu được gửi đến mặc định là server của form đó

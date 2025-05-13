@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="data"></h1>
+    <!-- id: là thuộc tính của HTML đánh dấu giá trị riêng biệt cho các thẻ như cccd của mỗi người -->
+
+    <input type="text" id="du_lieu" placeholder="Tên của bạn" oninput="nhapTen2()">
+    <!-- <button onclick="nhapTen()">Nhập</button> -->
+    <h1 id="hien_thi"></h1>
+
+    <script>
+
+        function nhapTen() { // Cú pháp tạo tính năng (function) custom (tự tạo)
+            let name = document.getElementById("du_lieu").value; // name sẽ hứng giá giá trị của ô input có id: du_lieu
+            document.getElementById("hien_thi").innerHTML = name; // Jiển thị lên thẻ HTML có id là hien_thi
+        }
+
+        function nhapTen2() { // Cú pháp tạo tính năng (function) custom (tự tạo)
+            let name = document.getElementById("du_lieu").value; // name sẽ hứng giá giá trị của ô input có id: du_lieu
+            document.getElementById("hien_thi").innerHTML = name; // Jiển thị lên thẻ HTML có id là hien_thi
+        }
+
+        // ------------------------------------------ Khái niệm biến ------------------------------------------------------
+        // Dữ liệu ở trong Js gom chung trong "biến" (variable)
+        // Biến: Là tên gọi của 1 vùng nhớ chữa dữ liệu
+        // ------------------------------------------ Sử dụng biến ---------------------------------------------------
+
+        // let name = "Trương Đăng Vũ Linh" // chuỗi;
+        // let a = 1 + 2; // 3
+        // ------------------------------------------ Xuất dữ liệu trong Js ----------------------------------------------------
+
+        // Các cách xuất dữ liệu
+        // alert(a); // Sẽ hiển thị dữ liệu lên hộp thoại
+
+        // console.log(a);
+        // Hiển thị ở Inspect (F12) - devtools => Console, thường dùng với dev để kiểm tra các giá trị, lỗi (bug)
+
+        // document.write(name);
+        // Sẽ hiển thị trên website
+
+
+        // Mục tiêu: hiển thị name vào trong thẻ h1 của HTML
+        // Hiển thị thông qua id thẻ
+        // document.getElementById("data").innerHTML = name;
+
+        // ------------------------------------------------- Nhập dữ liệu trong Js ----------------------------------------------
+        // let name = prompt("Nhập tên bạn đi: ");
+        // HIên thị 1 hộp thoại cho người dùng nhập dữ liệu
+        // document.write(name);
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+Bài tập: Tạo 1 folder mới và git lên github sau đó gửi link vào slack
+B1: Nhập vào tên của bạn và hiển thị ra cho người dùng (ít nhất 3 cách hiển thị) - Khuyến khích làm hết
+
+B2: Tạo lần lượt 5 biến sau: a = 1, b = 2, c = 10, d = 21
+Tính phép tính result = a + b - c / d 
+In ra result theo 4 cách
+
+ ----------------------------------
+Chuẩn bị (có thể tạo folder hoặc file ở trong folder bài tập luôn và git cùng lên)
+// Chi tiết bài sau: Biến trong Js
+Nắm được khái niệm về biến.
+Cú pháp khai báo biến. (let ,var , const)
+Nắm được các kiểu dữ liệu (chuỗi, số, boolean).
+Phân biệt toán tử khi thao tác với chuỗi và số.
+Toán tử toán học. (+, - , *, /, %, ++,  —)
+Toán tử gán ( += , -=, *=, /= )
+Toán tử so sánh (>, <, >=, <=, ==, !=)
+-->

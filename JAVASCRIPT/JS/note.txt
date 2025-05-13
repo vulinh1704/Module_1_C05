@@ -1,0 +1,21 @@
+- Ngôn ngữ lập trình là gì ? 
+  + Là các ký hiệu mà máy tính hoặc 1 thiết bị điện tử nào đó có thể hiểu được và làm các tính năng theo yêu cầu
+  + Ứng dụng: Tất cả các thiết bị điện tử
+  + Các loại ngôn ngữ lập trình: Javascript, Java, PHP, C, C++, Python, Ruby, ....
+
+- Javascript la gi ? 
+- Là 1 loại ngôn ngữ lập trình sử dụng nhiều trong xây dựng website (cả BackEnd(NodeJS) và FrontEnd(ReactJs, Angular, JS, ...))
+- Dễ học so với Java, Ruby, PHP phù hợp người mới bắt đầu
+ + Cú pháp
+ + Có thấy được sản phẩm ngay sau khi code
+- Mục tiêu Js: là tương tác với dữ liệu làm cho web sống động hơn
+
+
+- Cach sư dung JS (trong HTML)
++ C1: Tạo 1 file script bên ngoài
++ C2: Thẻ script
++ C3: Trực tiếp trong thẻ HTML thông qua các sự kiện
+
+
+- Mot vai cu phap co ban cua JS (nhap, xuat du lieu)
+  => Tim hieu trong 15p
