@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    Ngôn ngữ lập trình
+    Java, Javascript, PHP, Python, Ruby, C, C++
+
+    Js: tương tác tốt với HTML, CSS => web (sinh động hơn vì tương tác được với dữ liệu)
+    Dễ học dễ tiếp cận
+
+    Cách sử dụng: 3 cách
+    -->
+    <!-- <script>
+        // Sử dụng trực tiếp trong thẻ script
+        alert("Xin chào chao xìn")
+    </script> -->
+    <!-- <script src="index.js"></script> -->
+    <!-- Còn 1 cách thay src bằng đường dẫn online => Nhúng thư viện vào dự án -->
+    <!-- <button onclick="alert('Thanks you!!!')">Click me Pls</button> -->
+
+
+    <input type="text" id="data" oninput="showData()">
+    <h1 id="show"></h1>
+    <!-- 
+    Output:
+    - alert: Hiển thị dạng hộp thoại
+    - console.log(): hiển thị ở devtool (console)
+    - document.write: Hiển trực tiếp ra web
+    - document.getElementById().innerHTML: Hiển thị trên 1 thẻ nào đó thông ID của nó
+
+    Input:
+    - prompt: Sử dụng nhập qua hộp thoại
+    - Input: Lấy dữ liệu từ ô input qua id của nó và dùng sự kiện HTML để hiển thị (Nâng cao hơn)
+    -->
+    <script>
+        // alert("Bạn đang dùng alert");
+        // console.log("Bạn đang sử dụng console.log")
+        // document.write("Bạn đang sử document.write")
+        // document.getElementById("show").innerHTML = "Bạn đang hiển thị trên thẻ h1 qua id của nó"
+
+        // let a = prompt("Nhập giá trị đi: ");
+        // console.log(a);
+
+        function showData() {
+            let a = document.getElementById("data").value;
+            document.getElementById("show").innerHTML = a;
+        }
+    </script>
+</body>
+
+</html>

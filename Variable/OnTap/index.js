@@ -1,0 +1,1 @@
+alert("Đây là file Js")

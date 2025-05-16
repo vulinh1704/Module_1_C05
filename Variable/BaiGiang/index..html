@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Biến: Là tên gọi của 1 vùng nhớ chứ dữ liệu
+        // "Linh", 1, 1.5, "Hello"
+
+        // Cách khai báo 1 biến:
+        // let <tên biến> = <giá trị>
+        // 1 biến chỉ có thể khai báo 1 lần
+        // let name = "Linh";
+        // Thay đổi giá trị của 1 biến (gán lại giá trị)
+        // name = "Nghiep Tang Phat";
+        // alert(name);
+        // let a; // undefined: không xác định 
+        // a = "LInh";
+        // alert(a);
+
+        // Các cách khai báo biến: let, var, const
+
+        // scop
+        // var name = "Linh"; // có ở biến trước 2015 của JS và ít được sử dụng
+        // Phân biệt var, let, const (giải thích sau ở bài Hàm)
+        // Sử dụng chủ yếu let hoặc const
+        // alert(name);
+
+        // const PI = 3.14; // const sử dụng để khai báo các hằng số và chỉ nhận 1 giá trị duy nhất trong suốt chương trình
+
+        // Biến có phân biệt hoa thường
+        // let a = "Hello";
+        // let A = "hi";
+        // Không sử dụng ký tự đặc biệt đặt tên biến trừ _ $
+        //  Nên đặt tên tiếng Anh và có nghĩa
+        // Tránh đặt trùng keyword
+        // let _ = 10;
+        // alert(_)
+        // let name1 = "a";
+
+        // Kiểu dữ liệu
+        // Kiểu chuỗi (string): kiểu chữ viết bắt buộc bọc trong dấu "", '', ``
+        // let name = 'Trương đang vũ Linh';
+        // let name2 = "Linh";
+        // let a = "12449495"; // => string (chuỗi số)
+
+        // Kiểu số: Ký tự số
+        // let age = 1;
+        // let number = 2;
+
+        // Kiểu boolean: kiểu logic: chỉ có 2 giá trị: true or false
+        // let isSick = true;
+        // let isGoodDay = false; // dùng 100% ở cấu trúc rẽ nhánh
+
+
+        // Toán tử: là các ký tự đặc biệt thao tác với biến và sinh 1 kết quả nào đó
+        /*
+
+        Toán tử toán học: +    -    *   / 
+        Ưu tiên trong ngoặc trước ngoài ngoặc sau, nhân chia trước và cộng trừ sau  
+
+        */
+        //    let c = a + b; // 30
+        //    let d = a - b; // -10
+        //    let e = a * b; // 200
+        //    let f = a / b; // 0.5
+        // let a = 80;
+        // let b = 100;
+        // let g = a % b; // chia lấy phần dư
+        // alert(g); // 80
+
+        // Toán tử toán học có thể hoạt động với chuỗi số
+        // let a = "Vu"
+        // let b = " Linh";
+        // let c = a + b; // Cộng chuỗi
+        // alert(c);
+
+        // let a = 1;
+        // let b = "2"; 
+        // let c = a + b; // Cộng chuỗi với số ưu tiên kiểu dữ liệu chuỗi
+        // alert(c); // 12
+
+        // Các toán tử khác tương tác chuỗi số: thì tương tác như số bình thường
+        // let a = "1";
+        // let b = "2";
+        // let c = a * b;
+        // let d = a / b;
+        // % - hoạt động tương tự
+        // alert(d); // 0.5
+
+        // let a = "V";
+        // let b = "1";
+        // let c = a / b;
+        // alert(c); // NaN: Not a Number
+        // 80  "1264.2" 7010 7020
+
+        /*
+        2 * (3 + ‘5’) + ‘21’ - 20 / ‘5’ - (11 + 2 - ‘6’) 
+        = 2 * '35' + '21' - 4 - 7
+        = 70 + '21' - 4 - 7
+        = 7021 - 4 - 7
+        = 1010
+
+        */
+        // let d = 2 * (3 + '5') + '21' - 20 / '5' - (11 + 2 - '6');
+        // alert(d); // 7010
+
+        // Toán tử gán: =  +=  -=  *=  /=  %=  ++ --
+        // let a = 5;
+        // let b = a;
+        // let c = 10;
+
+        // let a = 10;
+        // a += 10; // <=> a = a + 10 = 10 + 10 = 20
+        // alert(a);
+
+        // a -= 10; // <=> a = a - 10 = 10 - 10 = 0
+        // alert(a);
+
+        // let a = 10;
+        // ++a; // <=> a = 1 + 1 = 10 + 1 = 11;
+        // a--;
+        // alert(a);
+
+        // Nói về tiền tố và hậu tố: tìm hiểu trước
+
+        // Toán tử so sánh < > <= >=  ==,===  !=,!==
+        // let a = 10;
+        // let b = 10;
+        // let c = a != b; // false
+        // alert(c); 
+
+        // let a = 10;
+        // let b = "10";
+        // let c = a == b; // chỉ quan tấm đến giá trị, không quan tâm đến kiểu dữ liệu => true
+        // let d = a === b; // xét cả giá và kiểu dữ liệu => false
+        // alert(d);
+
+        let a = 10;
+        let b = "10";
+        let c = a != b; // xét giá trị => false;
+        let d = a !== b; // xét giá trị hoặc kiểu dữ liệu: 1 khác về giá trị hoặc 2 khác kiểu dữ liệu thì sẽ trả về true
+        alert(d);
+
+
+        // Bài tập: 
+        /*
+        Làm list bài tập
+        7. Biến, kiểu dữ liệu và toán tử
+        Đọc bài đọc, xem bài giảng, triển khai thực hành, làm quizz
+        Làm bài tập (Máy tính năng cao buổi sau chữa);
+        */
+    </script>
+</body>
+
+</html>
