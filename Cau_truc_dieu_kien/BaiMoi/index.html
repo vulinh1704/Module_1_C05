@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau truc dieu kien</title>
+</head>
+
+<body>
+
+    <script>
+        // Toán tử logic
+        // let a = 10;
+        // let b = 20;
+        // let c = 15;
+        // console.log(a > b && b > c);// false && true => false
+        // console.log(a > b || b > c); // false || true => true
+
+        // if
+        // let diem = +prompt("Nhập điểm học sinh");
+        // if (diem >= 5 && diem <= 10) { // 11
+        //     console.log("Học module 2");
+        // }
+        // console.log("Học học nữa học mãi")
+
+        // if else
+        // let diem = +prompt("Nhập điểm học sinh");
+        // if (diem >= 5) {
+        //     console.log("Học module 2");
+        // } else { // <=> < 5: bắt các trường hợp ngược lại của if
+        //     console.log("Học lại");
+        // }
+
+        // if else bậc thang (if else if);
+        // Để mà xử lý nhiều trường hợp ta có thể dụng if bậc thang
+        // chỉ cần vào 1 điều kiện thì sẽ thực thi câu lệnh trong đó và không xét thêm khối else if nào nữa
+        // let diem = +prompt("Nhập điểm học sinh");
+        // if (diem < 3 && diem >= 0) {
+        //     console.log("Kém")
+        // } else if (diem >= 3 && diem < 5) {
+        //     console.log("Trung bình");
+        // } else if (diem >= 5 && diem <= 7) {
+        //     console.log("Khá")
+        // } else if (diem > 7 && diem <= 10) {
+        //     console.log("Giỏi")
+        // } else {
+        //     console.log("Điểm không lệ");
+        // }
+
+        let ngay = +prompt("Nhập vào ngày hôm nay:")
+
+        // Nếu không sử dụng break chương trình vào được 1 case nào đó nó chạy đến khi gặp break hoặc hết khối lệnh switch case
+        switch (ngay) { // bắt nhiều trường hợp, các câu lệnh xứ lý trong các trường hợp ngắn gọn, chỉ có thể so sánh bằng
+            case 2:
+                console.log("thứ 2");
+            case 3:
+                console.log("Thứ 3");
+            case 4:
+                console.log("Thứ 4");
+                break;
+            default:
+                console.log("Không hợp lệ");
+                break;
+        }
+
+
+        // if (ngay == 2) {
+        //     console.log("thứ 2");
+        // } else if (ngay == 3) {
+        //     console.log("Thứ 3");
+        // } else if (ngay == 4) {
+        //     console.log("Thứ 4");
+        // } 
+    </script>
+</body>
+
+</html>
+<!-- 
+Cấu trúc điều kiện 1 đọc bài đọc tham khảo video và thực hành, làm quizz
+
+Cấu trúc điều kiện 2 làm luyện tập 1 và làm mini game tự chọn
+
+-->
