@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("Nhập a"); // 10
+        let b = +prompt("Nhập b"); // 2
+        let c = +prompt("Nhập c"); // 3
+        // max = a => so sánh b > max thì max = b, so tiếp c với max c > max thì max = c, in max
+        // let max = a; // max = 10
+        // if (b > max) { // 2 > 10 (false)
+        //     max = b; 
+        // }
+        // if (c > max) {  // 3 > 10 (false)
+        //     max = c;
+        // }
+        // console.log(max); // 10
+
+        if (a > b) { // if lồng <=> viết như dưới sử dụng && 
+            if (a > c) { // a > b, a > c
+                alert(a);
+            } else { // a > b, a <= c 
+                alert(c)
+            }
+        } else { // b >= a
+            if (b > c) { // b >= a, b > c
+                alert(b);
+            } else { // b >= a, b <= c
+                alert(c);
+            }
+        }
+
+        if (a > b && a > c) {
+            alert(a);
+        } else if (a > b && a <= c) {
+            alert(c);
+        } else if (b >= a && b > c) {
+            alert(b)
+        } else if (b >= a && b < c) {
+            alert(c);
+        }
+
+        /*
+
+        Xếp loại học lực của học sinh dựa trên:
+        Điểm bài kiểm tra (chiếm 10%)
+        Điểm thi giữa kỳ (chiếm 40%)
+        Điểm thi cuối kỳ(chiếm 50%)
+
+        diemHl = (50% * ck + 30% * gk + 20% * kt)
+        <5 yếu
+        5 =< diem < 7 tb
+        7 =< diem <= 8 kha
+        8 < diem <= 10 gioi
+
+
+        Bài 6:
+        Tính hoa hồng nhận được dựa trên mức doanh số bán hàng.
+        hh = ds * %ăn
+        nhỏ hơn hoặc = 100 (ăn 20%)
+        lớn hơn hoặc = 200 (ăn 30%)
+        lớn 400 (an 35%)
+
+        
+        Bài 7: (Bài sau sử dụng vòng lăpj)
+        5p đầu free
+        10p sau đó 5k 1p
+        20p sau đó 6k 1p
+        40p => Tính tiền
+
+        */
+
+
+
+    </script>
+</body>
+
+</html>
