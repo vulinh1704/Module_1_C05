@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+</head>
+
+<body>
+    <div border="1">
+        <img onclick="changeimg1()" id="img1" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+            alt="" style="box-shadow: red 4px 4px 9px;"><br>
+        <img onclick="changeimg2()" id="img2" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg"
+            alt="" style="box-shadow: red 4px 4px 9px;"><br>
+        <img onclick="changeimg3()" id="img3" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg"
+            alt="" style="box-shadow: red 4px 4px 9px;"><br>
+        <img onclick="changeimg4()" id="img4" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg"
+            alt="" style="box-shadow: red 4px 4px 9px;">
+        <div>
+            <script>
+                function changeimg1() {
+                    let a = document.getElementById("img1");
+
+                    if (a.src == "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg") {
+                        a.setAttribute("src", "https://i.ibb.co/xStqy7yZ/diudiu1.png")
+                    } else
+                        a.setAttribute("src", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg")
+                }
+                function changeimg2() {
+                    let b = document.getElementById("img2");
+                    if (b.src == "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg") {
+                        b.setAttribute("src", "https://i.ibb.co/sdzMspMx/diudiu2.png")
+                    } else
+                        b.setAttribute("src", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg")
+                }
+                function changeimg3() {
+                    let c = document.getElementById("img3");
+                    if (c.src == "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg") {
+                        c.setAttribute("src", "https://i.ibb.co/p9Lf6X1/diudiu3.png")
+                    } else
+                        c.setAttribute("src", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg")
+                }
+                function changeimg4() {
+                    let d = document.getElementById("img4");
+                    if (d.src == "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg") {
+                        d.setAttribute("src", "https://i.ibb.co/PZZxQxBW/diudiu4.png")
+                    } else
+                        d.setAttribute("src", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg")
+                }
+            </script>
+</body>
+
+</html>
