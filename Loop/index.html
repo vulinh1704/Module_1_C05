@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*
+        for(let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        for(<khoi_tao_bien_dem>; <dieu_kien_lap>; <tang_hoac_giam_bien_dem>) {
+            <khoi lenh thuc thi>
+        }
+
+        Các bước chạy của vòng lặp for
+        B1: Khởi tạo biến đếm 
+        B2: Xét điều kiện lặp (nếu true thì sang b3, false thì dừng for)
+        B3: Thực thi khối lệnh
+        B4: Tăng (hoặc giảm) biến đếm
+        B5: Quay trở lại B2
+
+        */
+
+        // for (let i = 1; i <= 5; i++) { // i = 6 <= 5 (false) => HẾT VÒNG LẶP
+        //     console.log(i); // 1 2 3 4 5
+        // }
+
+        /*
+        B1: Khởi tạo biến đếm i = 1
+        B2: Xét điều kiên (i <= 5: true => bước 3)
+        B3: THực thi câu lệnh console.log(i ~ 1);
+        B4: Tăng biến đếm i: 1 -> 2
+        B5: Xét điều kiện (i = 2 <= 5: true => bước 3)
+        ...
+        Tăng đến i == 6
+        So sáng 6 <= 5 (false)
+
+        */
+
+        // for (let i = 20; i < 25; i++) { // i = 25 < 25 (false)
+        //     console.log(i); // ... 24
+        // }
+        //.....
+
+        // In ra 100 chữ 'Hello'
+        // for (let i = 1; i <= 100; i++) {
+        //     console.log("Hello");
+        // }
+
+        // Nhập vào N từ prompt. In ra N lần chữ 'Hello'
+        // let n = +prompt("Nhập N:");
+        // for(let i = 1; i <= n; i++) {
+        //     console.log("Hello");
+        // }
+
+        // In ra cac số từ 1 đến 1000;
+        // for(let i = 1; i <= 1000; i++) {
+        //     console.log(i);
+        // }
+
+        // In ra cac số từ a đến b;
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        // for (let i = a; i <= b; i++) {
+        //     console.log(i);
+        // }
+
+        // In ra cac số từ a đến b, mỗi số trong 1 thẻ <h1>;
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        // for (let i = a; i <= b; i++) {
+        //     document.write("<h1>" + i + "</h1>"); // <h1> 10 </h1>
+        // }
+
+        // In ra các số chẵn tu a đến b;
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        // for (let i = a; i <= b; i++) {
+        //     if (i % 2 == 0) {
+        //         document.write("<h1>" + i + "</h1>"); // <h1> 10 </h1>
+        //     }
+        // }
+
+        // In ra các số từ a đến b số chẵn trong h2, so le trong h1;
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        // for (let i = a; i <= b; i++) {
+        //     if (i % 2 == 0) {
+        //         document.write("<h5>" + i + "</h5>"); // <h1> 10 </h1>
+        //     } else {
+        //         document.write("<h1>" + i + "</h1>")
+        //     }
+        // }
+
+        // Tính tổng các số a => b.
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        /*
+        a = 5; b = 10 => 5 + 6 + 7 + 8 + 9 + 10;
+        */
+        // let sum = 0; // sum = 0
+        // for (let i = a; i <= b; i++) { // i = 7 <= 10
+        //     sum = sum + i;  // sum = 11 + 7 = ..
+        // }
+        // console.log(sum);
+
+        // let a = +prompt("Nhập a");
+        // let b = +prompt("Nhập b");
+        // let tich = 1;
+        // for (let i = a; i <= b; i++) {
+        //     tich = tich * i; //30 * 7 = 210.... 
+        // }
+        // console.log(tich);
+
+        
+        // Thay hết chứ trong cả dự án: Ctr + Shift + H
+        // Thay từ 1 dùng nào đó:  Ctr + H => Bôi đen vùng cần thay thế => Nhấn ba gạch => thay từ => replace all
+
+        // break: Khi gặp từ khóa này trong vòng lặp nó sẽ ngay lập tức dùng vòng lặp
+        // for (let i = 1; i <= 10; i++) { // i == 5
+        //     console.log(i);
+        //     if (i === 5) { // true
+        //         break;
+        //     }
+        // }
+
+        // continue: Khi gặp từ khóa này nó sẽ "bỏ qua" vòng lặp hiện tại
+        for (let i = 1; i <= 10; i++) { // i = 2
+            // if (i % 2 != 0) { // 0 != 0 (false) 
+            //     continue;
+            // }
+            continue;
+            console.log(i);
+        }
+
+        // Tính Tổng các số chia 5 dư 2 từ a đến b.
+        // Đếm các số chia 5 dư 2 từ a đến b
+        // In ra màn hình 0, 5 ,10,15, 20, ... 50.
+        // In ra  màn hình 10, 9, 8, 7, 6, ... 0.
+        // In ra màn hình 50, 45, 40, .. 0
+        // In ra bảng cửu chương 5
+        // [*Bài tập] Luyện tập vòng lặp 01
+
+    </script>
+</body>
+
+</html>
