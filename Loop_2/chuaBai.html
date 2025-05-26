@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let nhietDo;
+        // while (true) {
+        //     nhietDo = +prompt("Nhập nhiệt độ: ");
+        //     if (nhietDo > 100) {
+        //         alert("giảm nhiệt độ")
+        //     } else if (nhietDo < 20) {
+        //         alert("tăng nhiệt độ")
+        //     } else {
+        //         alert("Chuẩn rồi");
+        //         break;
+        //     }
+        // }
+
+        //0   1   1   2   3   5   8   13  21.....
+        //                    n1  n2  fib
+        // let number1 = 0; // 0
+        // let number2 = 1; // 1
+        // console.log(number1);
+        // console.log(number2);
+        // let count = 1;
+        // while (count <= 18) {
+        //     let fib = number1 + number2; // fib = 0 + 1 = 1
+        //     console.log(fib); // 1 2
+        //     count++;
+        //     number1 = number2; // number1 = 2;
+        //     number2 = fib; // number2 = 3;
+        // }
+
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 5 == 0 && i % 3 == 0) {
+        //         document.writeln("<h5>FizzBuzz</h5>");
+        //     } else if (i % 3 == 0) {
+        //         document.writeln("<h5>Fizz</h5>");
+        //     } else if (i % 5 == 0) {
+        //         document.writeln("<h5>Buzz</h5>");
+        //     } else {
+        //         document.writeln("<h5>" + i + "</h5>");
+        //     }
+        // }
+        let min = +prompt("Nhập số nhỏ nhất bạn muốn đoán"); // 2
+        let max = +prompt("Nhập số lớn nhất:"); // 10
+        let numberRandom = Math.floor(Math.random() * (max - min + 1) + min); // ceil
+        let count = 0;
+        while (true) {
+            let customerNumber = +prompt("Nhập số vào");
+            if (customerNumber > numberRandom) {
+                alert("Bạn đang nhập số lớn hơn");
+            }
+            if (customerNumber < numberRandom) {
+                alert("bạn đang nhập số nhỏ hơn:");
+            }
+            if (customerNumber == numberRandom) {
+                alert("Bạn thắng");
+                break;
+            }
+            if (count == 3) {
+                alert("gà");
+                break;
+            }
+            count++;
+        }
+    </script>
+</body>
+
+</html>

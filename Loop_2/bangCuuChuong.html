@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" id="table">
+    </table>
+
+    <script>
+        let html = "";
+        for (let i = 1; i <= 10; i++) { // i = 1
+            let dong = "<tr>";
+            for (let j = 1; j <= 10; j++) { // i = 1; j : 1 => 10
+                dong += `<td> ${j} * ${i} = ${i * j} </td>`; // HTML template
+            }
+            dong += "</tr>";
+            html += dong;
+        }
+        document.getElementById("table").innerHTML = html;
+    </script>
+
+</body>
+
+</html>

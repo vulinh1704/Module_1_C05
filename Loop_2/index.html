@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 2</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+
+        for(<khoi_tao_bien_dem>;<dieu_kien_dung>;<tang_giam_bien_dem>) {
+            <khoi_lenh_thuc_thi>
+        }
+
+        B1: Khởi tạo biến đếm
+        B2: Kiểm tra điều kiện dừng (Nếu true thì sang b3, false thừ dừng vòng lặp)
+        B3: Thực hiện khối lệnh thực thi
+        B4: Thay đôi giá trị biến đếm
+        B5: Quay trở lại bước 2
+
+        */
+        //    for(;;) {
+        //     console.log("Hello");
+        //    }
+
+        // for (let i = 1; i <= 10; i++) { // i = i + 1 => i = 2 <= 10 (true) => i = 2 + 1 => i = 3 <= 10 (true)
+        //     console.log(i); // 1 2 3
+        // }
+
+        // break và continue
+        /*
+        break: Là từ khóa sử dụng trong vòng lặp, khi vòng lặp từ khóa này ngay tức dừng vòng lặp
+        continue: Là từ khóa sử dụng trong vòng lặp, khi gặp từ khóa thì khối lệnh sẽ bỏ qua lượt lặp hiện tại
+        */
+        // for (let i = 1; i < 10; i++) {
+        //     console.log(i);
+        //     if(i == 5) { // true
+        //         break;
+        //     }
+        // }
+        // for (let i = 1; i < 10; i++) {
+        //     if (i % 2 === 0) {
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        /*
+        
+        while(<kieu_kien_lap>) { 
+            <khoi_lenh_thuc_thi>
+        }
+
+        // Nếu <dieu_kien_lap> là true thì thực thi khối lệnh, false thì dừng vòng lặp
+        // continue và break sử dụng được trong for, white và do while
+
+        let i = 1;
+        while (i <= 10) { //i = 11 <= 10 => false
+            console.log(i); // 1
+            i++; // i = i + 1 = 2 ... i = 10 + 1 = 11
+        }
+
+        console.log(i);
+        */
+
+        /*
+
+        do while
+
+        do {
+          <khoi_lenh_thu_thi>
+        } while(<dieu_kien_lap>)
+        
+        Note: do while luôn luôn chạy ít nhất 1 lần (<dieu_kien_lap> trả về false lần đâu thì 
+            vòng lặp do while sẽ thực hiẹn 1 lần)
+
+        // let i = 1;
+        // do {
+        //     console.log(i); // 1
+        //     i++; // i = i + 1 = 2
+        // } while (i <= 10); // 2 > 10 (false) => dừng
+        */
+
+        // In ra bảng cửu chương
+        // for (let i = 1; i <= 10; i++) { // i = 2 <= 10 (true) => i = 11
+        //     for (let j = 1; j <= 10; j++) { // j = 1 <= 10 (true)
+        //         console.log(i + " * " + j + " = " + i * j); // 2 * 1 = 1; 2 * 2 = 2; ....; 2 * 10 = 10
+        //     }
+
+        // }
+
+        // break, continue: sẽ có tác dụng ở vòng lặp bọc ngoài nó 
+
+        // let count = 0;
+        // do {
+        //     count++; // 11
+        // } while (count++ < 10); // 11 < 10 => count = 12
+
+        // console.log(count);
+
+        // let count = 0;
+        // for (; count < 5;) {
+        //     count++
+        // }
+
+        // let x = 1, i, a, b;
+
+        let x = 1, i;
+        for (i = 0; i < 3; i = i + 2) { // i = 4 < 3
+            x = x + 1;  // x = 3
+        }
+        console.log(x);
+        console.log(i);
+
+    </script>
+</body>
+
+</html>
