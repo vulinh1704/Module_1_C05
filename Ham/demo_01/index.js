@@ -206,12 +206,12 @@ Function scope: các biến có phạm vi ở trong cùng 1 function
 
 // add("vu", "linh")
 
-function test(a) {
-    if (a == 2) return 2;
-    return a * test(a - 1); // đệ quy
-}
+// function test(a) {
+//     if (a == 2) return 2;
+//     return a * test(a - 1); // đệ quy
+// }
 
-test(5);
+// test(5);
 
 /*
 test(5)  = 120
@@ -230,3 +230,73 @@ test(5)  = 120
 // }
 
 // test();
+
+
+/*
+// a và b: tham số truyền vào
+function getTotal(a, b) { // có vố các tham số truyền vào hàm
+    let total = a + b;
+    return total; // hàm trả về dữ liệu, khi gặp từ khóa return hàm sữ ngay lập tức dừng và trả lai dữ liệu
+    // 1000 lines code
+}
+
+
+function showTotal(a, b) {
+    let c = getTotal(a, b); // sử dụng hàm trong hàm khác
+    // 6, 6 đối số (giá trị thực sự truyền vào hàm khi gọi hàm), số lượng đối số nên bằng số lượng tham số 
+    document.write(c);
+}
+
+showTotal(4, 98); // showTotal(4, 98) => getTotal(4, 98) => c = total = 102 => in c
+
+function getAvg(a, b) {
+    let total = getTotal(a, b);
+    let avg = total / 2;
+    return avg;
+}
+*/
+
+// Các cách khai báo hàm;
+// let getTotal = (a, b) => { // arrow function
+//     let total = a + b;
+//     return total;
+// }
+
+// let getTotal = (a, b) => a + b;
+// let c = getTotal(4, 56);
+// document.write(c);
+
+// let showName = () => document.write("abc");
+// showName();
+
+/*
+
+Biến toàn cục: không nằm trong khối nào cả có thể sử dụng từ lúc khai báo đến hết chương trình
+Biến cục bộ: Nằm trong khối từ khai báo đến hết khối
+
+Phân biệt let, var và const
+let:
+- Không thể sử dụng biến trước khai báo
+- Không cho phép khai báo lại biẻn
+- Sử dụng trong cùng 1 block scope
+
+var:
+- Có thể sử dụng biến trc kbai báo
+- CHo phép khai báo lại biến
+- Function scope
+
+const: 
+- Tương tự let nhưng không cho phép GÁN lại giá trị
+
+*/
+
+if (true) {
+    let a = 10;
+}
+
+function go() {
+    let b = 20;
+} 
+go();
+alert(b);
+
