@@ -51,3 +51,4 @@ getAll();
 
 
 // Edit không đùng prompt mà dùng html
+// Lưu dữ liệu (local storage)
