@@ -16,9 +16,23 @@
 </head>
 
 <body>
-    <h2>Add new Product</h2>
+    <h1>Search</h1>
+    <input type="text" placeholder="Search name" id="name-search" oninput="search()">
+    <ul id="show-data">
+
+    </ul>
+
+    <h2>Save Product</h2>
+    <!-- 
+    Khi edit thay:
+     giá trị vào ô input dưới chứa giá trị cũ sản phẩm
+     và nút add thành edit
+      -->
     <input type="text" placeholder="New Product" id="newProduct">
-    <button onclick="add()">Add</button>
+    <div id="action">
+        <button onclick="add()">Add</button>
+    </div>
+
 
     <h2>Display All Product</h2>
     <table border="1">
