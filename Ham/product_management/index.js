@@ -1,13 +1,40 @@
 // CRUD: tạo, đọc, sửa, xóa
 // Đọc
 
-let productNames = ["Iphone", "Macbook", "Win"];
+// Local Storage: lưu giá trị trên chorme máy mọi người
+// localStorage.setItem("name", JSON.stringify(["Iphone", "Macbook", "Win"])); // "Chỉ lưu được dạng chuỗi"
+// let data = JSON.parse(localStorage.getItem("name")); // lấy ra cũng là chuỗi
+// console.log("data", data);
+
+
+let productNames;
+getDataInStorage();
+
+function getDataInStorage() {
+    let data = localStorage.getItem("productNames"); // '["Iphone", "Samsung"]'
+    // null
+
+    if (data) {
+        productNames = JSON.parse(data); // ["Iphone"]
+    } else {
+        productNames = [];
+        saveDataInStorage();
+    }
+}
+
+// Call khi có thay data ở productNames: lần đầu tiên chạy chương, CUD
+function saveDataInStorage() {
+    let data = JSON.stringify(productNames); // '[]'
+    localStorage.setItem("productNames", data);
+}
+
 
 function add() {
     let newData = document.getElementById("newProduct").value;
     productNames.push(newData);
     getAll();
     document.getElementById("newProduct").value = '';
+    saveDataInStorage();
 }
 
 function remove(index) {
@@ -15,6 +42,7 @@ function remove(index) {
     if (isConfirm) {
         productNames.splice(index, 1);
         getAll();
+        saveDataInStorage();
     }
 }
 
@@ -62,6 +90,7 @@ function edit(index) {
     }
     document.getElementById("newProduct").value = "";
     document.getElementById("action").innerHTML = ` <button onclick="add()">Add</button>`;
+    saveDataInStorage();
 }
 
 getAll();
