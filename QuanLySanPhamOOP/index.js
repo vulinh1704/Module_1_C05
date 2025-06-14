@@ -1,10 +1,7 @@
 let myStore = new Store(1, "Shopee");
 console.log("myStore", myStore);
 
-function getAll() {
-    let list = myStore.getListProducts(); // Mảng product
-    console.log("list", list);
-
+function getAll(list) { // nhận vào 1 mảng product => có gì thì hiển thị đó
     let html = ``;
     for (let i = 0; i < list.length; i++) {
         let product = list[i]; // lấy ra từng product
@@ -20,6 +17,42 @@ function getAll() {
         `
     }
     document.getElementById("list_products").innerHTML = html;
+}
+
+function search() {
+    let nameSearch = document.getElementById("search-input").value;
+    let priceStart = +document.getElementById("price-start").value;
+    let priceEnd = +document.getElementById("price-end").value;
+    if (!priceStart) priceStart = -Infinity;
+    if(!priceEnd) priceEnd = Infinity;
+    let list = myStore.getListSearch(nameSearch, priceStart, priceEnd);
+    getAll(list);
+}
+
+function navigateToHome() {
+    document.getElementById("ui").innerHTML = `
+    <h2>Danh sách sản phẩm</h2>
+    <input type="text" placeholder="Tìm kiếm" id="search-input" oninput="search()">
+    <input type="number" placeholder="Giá bắt đầu" id="price-start" oninput="search()">
+    <input type="number" placeholder="Giá kết thúc" id="price-end" oninput="search()">
+    <br>
+    <br>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th colspan="2">Action</th>
+            </tr>
+            <tbody id="list_products">
+            </tbody>
+        </table>
+    `
+    myStore.getDateInStorage();
+    let list = myStore.getListProducts(); // Mảng product
+    console.log("list", list);
+    getAll(list);
 }
 
 function addProduct() {
@@ -49,24 +82,6 @@ function updateProduct(id) {
     let p = new Product(id, name, price, quantity);
     myStore.update(id, p);
     navigateToHome();
-}
-
-function navigateToHome() {
-    document.getElementById("ui").innerHTML = `
-    <h2>Danh sách sản phẩm</h2>
-        <table border="1">
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th colspan="2">Action</th>
-            </tr>
-            <tbody id="list_products">
-            </tbody>
-        </table>
-    `
-    getAll();
 }
 
 function navigateToUpdate(id) { // hiển hị dữ liệu cũ
@@ -109,7 +124,7 @@ function navigateToAdd() {
 navigateToHome();
 
 
-// Hoàn thành CRUD như Demo 
+// Hoàn thành CRUD như Demo
 // (tương ứng với dự án cuối module)
 /* 
 Nâng cao 
@@ -118,4 +133,14 @@ Tìm kiếm sản phẩm theo:
 Khoảng giá
 Tên gần đúng
 Khoảng số lượng
+*/
+
+
+/*
+
+Dự án cuối module:
+Quản lý: tương tự demo, tìm hiểu thêm css, quản lý thêm nhiều chủ thể hơn
+- nếu bí ý tưởng => hỏi Ning
+
+Mini game: bắn bóng, flappy bird (tự chọn js,html,css)
 */
